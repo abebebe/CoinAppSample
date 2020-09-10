@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinAppSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xv2-gY-G5o">
+                                <rect key="frame" x="0.0" y="642" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="69T-YV-ydJ"/>
+                                </constraints>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Keb-77-tdj">
+                                <rect key="frame" x="20" y="144" width="374" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2t-TA-Eyx">
+                                        <rect key="frame" x="10" y="0.0" width="354" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1e-1Y-hz1">
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="100"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vh-KO-Uws">
+                                                <rect key="frame" x="304" y="0.0" width="50" height="100"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="I2t-TA-Eyx" firstAttribute="leading" secondItem="Keb-77-tdj" secondAttribute="leading" constant="10" id="2Yy-vS-OR1"/>
+                                    <constraint firstItem="I2t-TA-Eyx" firstAttribute="top" secondItem="Keb-77-tdj" secondAttribute="top" id="6GH-bB-A8k"/>
+                                    <constraint firstAttribute="height" constant="100" id="9bl-lk-5Xd"/>
+                                    <constraint firstAttribute="trailing" secondItem="I2t-TA-Eyx" secondAttribute="trailing" constant="10" id="fXK-hE-h5M"/>
+                                    <constraint firstAttribute="bottom" secondItem="I2t-TA-Eyx" secondAttribute="bottom" id="gGB-fM-0l7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xv2-gY-G5o" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8bz-TX-6YC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xv2-gY-G5o" secondAttribute="bottom" constant="20" id="Ce0-r7-jFF"/>
+                            <constraint firstItem="Keb-77-tdj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ek1-t4-Pfx"/>
+                            <constraint firstItem="Keb-77-tdj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="R9c-6l-kcS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Keb-77-tdj" secondAttribute="trailing" constant="20" id="b1G-ZN-iSR"/>
+                            <constraint firstItem="Xv2-gY-G5o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oOJ-ad-zdC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="coinLabel" destination="b1e-1Y-hz1" id="hGF-VX-QKv"/>
+                        <outlet property="currencyLabel" destination="3Vh-KO-Uws" id="C6F-v2-0yQ"/>
+                        <outlet property="currencyPicker" destination="Xv2-gY-G5o" id="QEc-I4-0tn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
